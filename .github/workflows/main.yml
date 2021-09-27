@@ -93,8 +93,8 @@ jobs:
           group: "UI - Chrome"
           spec: cypress/tests/ui/*
         env:
-          CYPRESS_PROJECT_ID: 6qocao
-          CYPRESS_RECORD_KEY: 910940e2-a3f6-442a-abf6-f88ba92ccd87
+          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
